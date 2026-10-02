@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Maze Solver - ADSA</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🧩 Maze Solver</h1>
+
+        <p class="subtitle">
+            Visualize BFS, DFS, Dijkstra and A* Algorithms
+        </p>
+
+        <div class="controls">
+
+            <button onclick="generateMaze()">
+                Generate Maze
+            </button>
+
+            <select id="algorithm">
+
+                <option value="bfs">
+                    BFS - Breadth First Search
+                </option>
+
+                <option value="dfs">
+                    DFS - Depth First Search
+                </option>
+
+                <option value="dijkstra">
+                    Dijkstra's Algorithm
+                </option>
+
+                <option value="astar">
+                    A* Algorithm
+                </option>
+
+            </select>
+
+            <button class="solve-btn"
+                onclick="solveMaze()">
+                Solve Maze
+            </button>
+
+            <button class="clear-btn"
+                onclick="clearMaze()">
+                Clear
+            </button>
+
+        </div>
+
+
+        <div class="info">
+
+            <div>
+                <span class="box start-box"></span>
+                Start
+            </div>
+
+            <div>
+                <span class="box end-box"></span>
+                End
+            </div>
+
+            <div>
+                <span class="box wall-box"></span>
+                Wall
+            </div>
+
+            <div>
+                <span class="box visited-box"></span>
+                Visited
+            </div>
+
+            <div>
+                <span class="box path-box"></span>
+                Path
+            </div>
+
+        </div>
+
+
+        <div id="maze"></div>
+
+
+        <div class="result">
+
+            <h2>Algorithm Information</h2>
+
+            <p id="algorithmInfo">
+                Select an algorithm and solve the maze.
+            </p>
+
+            <p id="status"></p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
